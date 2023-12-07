@@ -1,1 +1,224 @@
-Hello !
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my test</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    Hello ! z XTKIsds
+    <h1 style="color: red; background-color: aquamarine">Введение</h1>
+    <p>
+      В данной статье мы обсудим новые возможности работы с массивами в
+      JavaScript, которые были добавлены в ES2023.
+    </p>
+    <h1>findLast и findLastIndex</h1>
+    <p>
+      Допустим, у нас есть массив с элементами: const arr = [0, 1, 2, 3, 7]; Нам
+      нужно найти элемент со значением 7, и мы предполагаем, что он находится
+      ближе к концу массива. В предыдущем варианте когда мы использовали find(),
+      мы бы делали это следующим образом: const arr = [0, 1, 2, 3, 7]; const res
+      = arr.find(el => { console.log('Поиск'); return el == 7; }) // 5 раз будет
+      выведено в консоли слово "Поиск" Это может быть нормально для небольших
+      массивов, но если массив большой и вы знаете, что элемент находится ближе
+      к концу, то можно использовать метод findLast(): const arr = [0, 1, 2, 3,
+      7]; const res = arr.findLast(el => { console.log('Поиск'); return el == 7;
+      }) // вывод в консоль: Поиск В этом случае вывод будет происходить только
+      1 раз. Аналогично существует метод findLastIndex(), который ищет элемент
+      по индексу.
+    </p>
+    <h1>Методы не изменяющие исходный массив</h1>
+    <p>
+      Большинство методов работы с массивами в JavaScript изменяют исходный
+      массив вместо создания нового. Например, это может вызвать проблемы в
+      React, когда необходимо изменить состояние и создать новый массив. Мы
+      рассмотрим, как это решается в последней версии спецификации ES2023 и в
+      JavaScript. Потому ниже мы рассмотрим новые методы, которые позволяют
+      этого избежать.
+    </p>
+    <h1>with</h1>
+    <p>Предположим, нам нужно:</p>
+    <ul>
+      <li>Взять массив</li>
+      <li>Изменить его элемент</li>
+      <li>Создать новый массив</li>
+    </ul>
+    <p>
+      Теперь с <span>SPAN HERE</span> помощью метода with() мы можем это сделать
+      гораздо проще. Нам нужно передать индекс, на котором мы хотим заменить
+      элемент, а затем значение этого элемента: const a = [1, 3, 5] const arrNew
+      = a.with(1, 'test'); console.log(a); // вывод: [1, 3, 5]
+      console.log(arrNew); // вывод: [1, 'test', 5] Метод with() копирует
+      исходный массив, меняет один элемент и возвращает новый
+      <a href="https://purpleschool.ru/blog/es2023-arrays">&GreaterEqual;</a>
+      <a href="https://purpleschool.ru/blog/es2023-arrays">массив</a>
+      c измененным элементом по указанному индексу.
+    </p>
+
+    <div>DIV</div>
+    <img
+      src="https://purpleschool.ru/_next/image?url=https%3A%2F%2Fcdn-bucket.hb.bizmrg.com%2Fpurple-images%2Fcourses%2Fundefined%2F%25D0%259E%25D0%25B1%25D0%25BB%25D0%25BE%25D0%25B6%25D0%25BA%25D0%25B0-basic.jpg&w=1920&q=75"
+      alt="kaka"
+      width="300"
+    />
+    <img
+      src="https://purpleschool.ru/_next/image?url=https%3A%2F%2Fcdn-bucket.hb.bizmrg.com%2Fpurple-images%2Fcourses%2Fundefined%2F%25D0%259E%25D0%25B1%25D0%25BB%25D0%25BE%25D0%25B6%25D0%25BA%25D0%25B0-basic.jpg&w=1920&q=75"
+      alt="kaka"
+      width="300"
+    />
+    <!-- <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+    <ol>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ol> -->
+
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <table>
+      <caption>
+        Название таблицы
+      </caption>
+      <thead>
+        <tr>
+          <th rowspan="2">Услуга</th>
+          <th colspan="2">Цена</th>
+        </tr>
+        <tr>
+          <th>Руб</th>
+          <th>$$$</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Услуга 1</td>
+          <td>30 000</td>
+          <td>700</td>
+        </tr>
+        <tr>
+          <td>Услуга 1</td>
+          <td>120 000</td>
+          <td>1 900</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Итого</td>
+          <td>100 000</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <table>
+      <caption>
+        Таблица прибыли и расходов
+      </caption>
+      <thead>
+        <tr>
+          <th>Год</th>
+          <th colspan="2">2023</th>
+          <th colspan="2">2024</th>
+        </tr>
+        <tr>
+          <th>Полугодие</th>
+          <th>1</th>
+          <th>2</th>
+          <th>1</th>
+          <th>2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Прибыль</th>
+          <td>1500</td>
+          <td>1800</td>
+          <td>2000</td>
+          <td>3000</td>
+        </tr>
+        <tr>
+          <th>Расход</th>
+          <td>-500</td>
+          <td>-600</td>
+          <td>-700</td>
+          <td>-1000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Итог</th>
+          <td>1000</td>
+          <td>1200</td>
+          <td>1300</td>
+          <td>2000</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <form action="/register">
+      <label for="login">login</label>
+      <input type="text" placeholder="login" id="login" name="login" />
+      <label for="birthday">birthday</label>
+      <input type="date" placeholder="birthday" id="birthday" name="birthday" />
+      <button>Кнопка</button>
+    </form>
+    <hr />
+    <!-- <form action="https://www.youtube.com/results"> -->
+    <main>
+      <h1>ZAGOLOVOK</h1>
+      <form action="">
+        <div>
+          <label for="search_query">Введите поисковой запрос</label>
+          <input type="text" name="search_query" id="search_query" />
+        </div>
+        <div>
+          <label for="agree">Согласен с обработкой</label>
+          <input type="checkbox" name="agree" id="agree" />
+        </div>
+        <div>
+          <label for="youtube">Youtube</label>
+          <input
+            type="radio"
+            name="search_radio"
+            id="youtube"
+            value="youtube"
+          />
+        </div>
+        <div>
+          <label for="twitch">Twitch</label>
+          <input type="radio" name="search_radio" id="twitch" value="twitch" />
+        </div>
+        <div>
+          <select name="topic" id="topic">
+            <option value="1">Food</option>
+            <option value="2">Animals</option>
+            <option value="3">JS</option>
+          </select>
+        </div>
+        <div>
+          <label for="volume">Volume</label>
+          <input type="range" name="volume" id="volume" />
+        </div>
+
+        <div>
+          <label for="area">Comment</label>
+          <textarea name="area" id="area" cols="30" rows="10"></textarea>
+        </div>
+
+        <button>Поиск</button>
+      </form>
+    </main>
+  </body>
+</html>
