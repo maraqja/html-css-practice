@@ -1,28 +1,70 @@
+body {
+	background-color: #0b0b0c;
+}
+
 main {
 	background-color: #1E1F29;
+	border-radius: 10px;
+	padding: 48px;
 }
 
 h1 {
 	color: #FAFAFA;
 	font-size: 36px;
 	font-weight: 700;
-	font-family: 'Andale Mono', monospace;
+	font-family: 'Andale Mono', sans-serif;
+	text-align: center;
+	margin-bottom: 0 0 32px 0;
+}
+
+.field {
+	position: relative;
+	margin-bottom: 16px;
+}
+
+.field img {
+	position: absolute;
+	top: 17px;
+	left: 17px;
 }
 
 input, textarea, select {
 	background: #2E2D3D;
 	color: #FAFAFA;
+	font-family: 'Andale Mono', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	padding: 27px 48px 12px;
+	border: none;
+	border-radius: 6px;
+
+}
+  
+input::placeholder, textarea::placeholder, select::placeholder {
+	color: #637aa7;
+	font-size: 16px;
 }
 
 label {
+	position: absolute;
 	color: #AFB2BF;
+	top: 12px;
+	left: 48px;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 14px;
 }
 
 button {
 	background-color: #6C38CC;
 	color: #FAFAFA;
-}
+	border: none;
+	border-radius: 10px;
+	margin: 0 auto;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 22px;
+	text-align: center;
 
-input[type="email"] {
-	background-color: red;
 }

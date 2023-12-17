@@ -21,6 +21,14 @@ input, textarea, select {
 	color: #FAFAFA;
 }
 
+input:invalid {
+	background: red;;
+}
+
+input:valid {
+	background: green;;
+}
+
 label {
 	color: #AFB2BF;
 }
