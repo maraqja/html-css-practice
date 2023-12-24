@@ -178,7 +178,6 @@ footer {
 
 
 .exp div {
-	width: 200px;
 	height: 200px;
 	background-color: #050038;
 	margin: 10px;
@@ -186,19 +185,20 @@ footer {
 	font-size: 20px;
 	/* animation: my-move 2s ease forwards; */
 
-		animation-name: my-move;
+		/* animation-name: my-move;
 	animation-duration: 2s;
 	animation-timing-function: ease;
 	animation-fill-mode: forwards;
 	
-	animation-iteration-count: infinite;
+	animation-iteration-count: infinite; */
 	/* animation-direction: alternate; */
+	width: clamp(200px, 80%, 600px);
 }
 
 
-.exp:hover div {
-	animation-play-state: paused;
-}
+/* .exp:hover div {
+	animation-play-state: paused;;
+} */
 
 
 @keyframes my-move {
@@ -216,5 +216,21 @@ footer {
 
 	100% {
 		transform: translateX(0%) translateY(0%);
+	}
+}
+
+
+
+@media (max-width: 700px) {
+	h1 {
+		color: yellow;
+	}
+}
+
+
+
+@media (max-width: 500px) {
+	h1 {
+		color: red;
 	}
 }
