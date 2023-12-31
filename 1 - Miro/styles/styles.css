@@ -1,9 +1,18 @@
 * {
 	box-sizing: border-box;
 }
+/* 
+
+ @font-face {
+ 	font-family: "Roboto";
+ 	src: url("../fonts/Roboto-Regular.ttf");
+ } */
+
+
 
 body {
 	margin: 0;
+	font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -11,7 +20,7 @@ h1 {
 }
 
 h2 {
-	margin: 0 0 19px 0;
+	margin: 60px 0 19px 0;
 }
 
 h1, h2 {
@@ -21,12 +30,24 @@ h1, h2 {
 	color: #050038;
 }
 
+section {
+	max-width: 1200px;
+	margin: 0 auto; 
+	padding: 0 40px;
+	margin-bottom: 200px;
+}
+
 p {
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 24px;
 }
 
+
+header {
+	border-bottom: 1px solid #F0F0F0;
+	margin-bottom: 60px;
+}
 
 header a {
 	font-weight: 400;
@@ -39,24 +60,42 @@ header a {
 
 nav {
 	padding: 33px 50px;
-	border-bottom: 1px solid #F0F0F0;
 	margin-bottom: 60px;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 nav ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	display: flex;
+	gap: 30px;
 }
 
 footer {
 	background: #050038;
 	padding: 47px 40px;
+	color: white;
+}
+
+footer > div {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	padding: 0 40px;
+	gap: 20px;
 }
 
 footer a {
 	color: white;
 	text-decoration: none;
+}
+
+.heroForm {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
 .heroForm+p {
@@ -65,6 +104,13 @@ footer a {
 	line-height: 20px;
 	color: #050038;
 	margin: 8px 0 52px 0;
+}
+
+.heroLogos {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
 }
 
 .heroText {
@@ -98,7 +144,7 @@ footer a {
 .heroForm input {
 	border-radius: 32px;
 	border: 1px solid #9B99AF;
-	height: 38px;
+	height: 48px;
 	padding: 5px 10px;
 }
 
@@ -143,6 +189,8 @@ footer a {
 
 #hero {
 	font-size: 16px;
+	display: flex;
+	gap: 65px;
 }
 
 h1 {
@@ -176,25 +224,15 @@ footer {
 	width: 100%;
 }
 
-
-.exp div {
-	height: 200px;
-	background-color: #050038;
-	margin: 10px;
-	color: white;
-	font-size: 20px;
-	/* animation: my-move 2s ease forwards; */
-
-		/* animation-name: my-move;
-	animation-duration: 2s;
-	animation-timing-function: ease;
-	animation-fill-mode: forwards;
-	
-	animation-iteration-count: infinite; */
-	/* animation-direction: alternate; */
-	width: clamp(200px, 80%, 600px);
+.section {
+	display: flex;
+	gap: 116px;
 }
 
+
+.section-reverse {
+	flex-direction: row-reverse;
+}
 
 /* .exp:hover div {
 	animation-play-state: paused;;
