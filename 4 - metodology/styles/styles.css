@@ -6,7 +6,9 @@
 
 
 */  
-
+body {
+	--color-primary: blueviolet;
+}
 
 .section-header {
 
@@ -34,7 +36,7 @@
 
 
 .button_primary {
-	background-color: blueviolet;
+	background-color: var(--color-primary, red);
 	color: white;
 }
 
