@@ -1,0 +1,54 @@
+/*
+
+Б - блок = section, section-header : т.е. через -
+Э - элемент блока = blockName__elementName
+М - модификатор = через _ : описывает тему элемента - напримеер, на сайте много кнопок, которые только цветом отличаются
+
+
+*/  
+
+
+.section-header {
+
+}
+
+.section-header__top {
+
+}
+
+.section-header__h2 {
+	 
+}
+
+
+/* Модификаторы */
+.button {
+	padding: 16px 32px;
+	border-radius: 10px;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 22px;
+	background:none;
+	border: none;
+}
+
+
+.button_primary {
+	background-color: blueviolet;
+	color: white;
+}
+
+.button_ghost {
+	border: 1px solid #4D5064;
+
+}
+
+
+
+
+
+/* mix */
+
+.heromix__button {
+	margin-top: 20px;
+}
