@@ -129,10 +129,21 @@
 	background: var(--color-bg-medium);
 }
 
+.card_light {
+	background: var(--color-bg-light);
+}
+
 .card_32 {
 	padding: 32px;
 }
 
+.card_48x24 {
+	padding: 48px 24px;
+}
+
+.card_24x32 {
+	padding: 24px 32px;
+}
 
 /* post-wrapper  */
 
@@ -200,4 +211,121 @@
 	.post__header {
 		font-size: 21px;
 	}
+}
+
+
+/* chip  */
+
+.chip__wrapper {
+	display: flex;
+	gap: 24px;
+	margin-bottom: 32px;
+	overflow: scroll;
+	margin-right: -24px;
+	margin-left: -24px;
+	padding-left: 24px;
+}
+
+.chip__wrapper::-webkit-scrollbar {
+	display: none;
+}
+
+
+.chip {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 120%;
+	color: var(--color-text);
+	padding: 8px 16px;
+	border: 1px solid var(--color-stroke);
+	border-radius: var(--border-10);
+	background: none;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.chip:hover {
+	background: var(--color-bg-medium);
+}
+
+.chip_active {
+	background: var(--color-primary);
+	border: none;
+}
+
+
+/* course  */
+
+
+
+.course-card {
+	background: var(--color-bg-medium);
+	border-radius: var(--border-10);
+	color: var(--color-text);
+}
+
+
+.course-card__tags {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+
+.course-card__body {
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.course-card__cover img{
+	border-radius: var(--border-10) var(--border-10) 0 0;
+	width: 100%;
+}
+
+.course-card__title {
+	color: var(--color-text);
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 120%;
+	margin-bottom: 4px;
+}
+
+.course-card__author {
+	color: var(--color-link-hover);
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 120%;
+
+}
+
+
+.course-card__footer {
+	background: var(--color-bg-light);
+	display: grid;
+	padding: 24px;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 120%;
+	border-radius: 0 0 var(--border-10) var(--border-10);
+}
+
+
+
+
+/* tag  */
+
+.tag {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 120%;
+	color: var(--color-text);
+	border-radius: var(--border-17);
+	border: 1px solid var(--color-stroke, #4D5064);
+	padding: 6px 12px;
+	display: flex;
+	gap: 4px;
 }
